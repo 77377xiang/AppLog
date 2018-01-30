@@ -13,24 +13,31 @@
     
         使用  
         项目 的 build.gradle
+        
         maven { url "https://jitpack.io" }
 
        app 的 build.gradle
 
-      dependencies { compile 'com.github.77377xiang:SoftKeyBoard:v1.0' }
+      dependencies { compile 'com.github.77377xiang:AppLog:v1.0' }
   
   
   
-         
+  
  
      RuntimeEnv.init(this); // 初始化运行时 相关信息日志库
+     
        LogManager.openLog(false); //  日志开关 release  默认不打开
+       
        LogManager.writeFile(true); // 释放写入文件  默认写入
 
         // 获得错误  再次打开app 返回自己服务
+        
         File crashFile = LogManager.getCrashFile();
+        
         if (crashFile!=null){
+        
             LogManager.d("MyAppLaction", "文件名称："+crashFile.getName() + "文件路经"+crashFile.getPath() );
+            
             // 做上传
         }
         
