@@ -24,7 +24,7 @@
   
   
  
-     RuntimeEnv.init(this); // 初始化运行时 相关信息日志库
+       RuntimeEnv.init(this); // 初始化运行时 相关信息日志库
      
        LogManager.openLog(false); //  日志开关 release  默认不打开
        
